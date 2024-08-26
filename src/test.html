@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Code Replicado</title>
+            <style>
+                body {
+                    font-size: 10px;
+                    line-height: 19px;
+                    margin: 20px;
+                }
+                pre {
+                    padding: 10px;
+                    border-radius: 5px;
+                    overflow: auto;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Código Replicado</h1>
+            <pre id="code">${escapeHtml(code)}<r>@sdfdsfdsdsfdf<hr></pre>
+            <script>
+                const vscode = acquireVsCodeApi();
+                window.addEventListener('message', event => {
+                    const message = event.data; // The JSON data our extension sent
+                    switch (message.command) {
+                        case 'update':
+                            document.getElementById('code').textContent = message.text;
+                            break;
+                    }
+                });
+            </script>
+        </body>
+        </html>

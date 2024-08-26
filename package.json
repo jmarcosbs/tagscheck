@@ -1,11 +1,22 @@
 {
   "name": "tagscheck",
   "displayName": "TagsCheck",
-  "description": "Check OS requiriments",
-  "version": "0.0.1",
+  "description": "Hide comments to view the requirements",
+  "icon": "img/icon.png",
+  "version": "1.0.3",
+  "publisher": "jmarcosbs",
+  "author": {
+		"name": "João Marcos"
+	},
   "engines": {
     "vscode": "^1.92.0"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/jmarcosbs/tagscheck",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jmarcosbs/tagscheck.git"
+	},
   "categories": [
     "Other"
   ],
@@ -14,8 +25,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.checkForOi",
-        "title": "Check for 'oi'"
+        "command": "extension.tagscheck",
+        "title": "TagsCheck"
       }
     ]
   },
